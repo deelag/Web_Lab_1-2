@@ -1,0 +1,57 @@
+:root {
+    --font-size-lg: 1.8rem;
+    --font-size-md: 1.3rem;
+    --font-size-sm: 1rem;
+    --font-size-xs: 0.75rem;
+}
+
+body {
+    background-color: #fef8f5;
+    font-family: Rubik, sans-serif;
+    font-weight: 400;
+    margin: 0;
+    padding: 0;
+}
+
+.link:hover {
+    text-decoration: none #FFF;
+}
+
+.section-title {
+    font-weight: bolder;
+    font-size: var(--font-size-lg);
+    line-height: 40px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #EE4D47;
+}
+
+.paragraph {
+    font-weight: 100;
+    font-size: var(--font-size-md);
+    line-height: 40px;
+    color: #402B2B;
+}
+
+.button {
+    border: 0px;
+    background: #EE4D47;
+    border-radius: 5px;
+    transition: opacity 1s ease-in;
+}
+
+.button:hover{
+    opacity: 0.7;
+}
+
+@media (max-width: 1024px) {
+    .section-title {
+        font-size: 22px;
+        margin: 10px;
+        text-align: center;
+    }
+    .paragraph {
+        text-align: center;
+        margin: 0px;
+    }
+}

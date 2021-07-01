@@ -1,0 +1,13 @@
+/* helpers */
+@import "./normalize.min.css";
+
+/* globals */
+/* @import "./animations.css"; */
+@import "./global.css";
+
+/* sections */
+@import "./header.css";
+@import "./about_us.css";
+@import "./how-to.css";
+@import "./awesome-clients.css";
+@import "./footer.css";

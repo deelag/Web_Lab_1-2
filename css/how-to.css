@@ -1,0 +1,63 @@
+.how-to-container {
+    display: flex;
+    justify-content: center;
+    margin-right: 130px;
+}
+
+.how-to-right-side {
+    padding-top: 140px;
+    margin-left: 140px;
+}
+
+.how-to-text {
+    width: 455px;
+}
+
+/********** Medium devices only **********/
+
+@media (min-width: 1024px) and (max-width: 1439px) {
+    .how-to-container{
+        margin-right: 0px;
+        margin-bottom: 80px;
+    }
+    .how-to-right-side{
+        margin: 0px;
+        width: 40%;
+        margin-right: 5%;
+        margin-left: 5%;
+        padding-top: 0px;
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .how-to-left-side {
+        width: 50%;
+        display: flex;
+    }
+}
+
+
+/**********Small devices only **********/
+
+@media (max-width: 1024px) {
+    .how-to-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 0px;
+    }
+    .how-to-left-side {
+        width: 85%;
+    }
+    .how-to-right-side {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        order: -1;
+        padding-top: 0px;
+        margin: 0px;
+    }
+    .how-to-text {
+        width: 85%;
+    }
+}
