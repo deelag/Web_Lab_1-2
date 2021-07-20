@@ -7,7 +7,7 @@ header {
 
 header * {
     font-weight: bold;
-    line-height: 19px;
+    line-height: 1.5em;
     letter-spacing: 0.05em;
     color: #FFF;
     text-transform: uppercase;
@@ -49,14 +49,39 @@ header * {
     list-style-type: none;
 }
 
-.header__nav-link {
-    text-decoration: none;
+/* Animate the link line from the left */
+
+.header__nav-item>a {
+    position: relative;
     color: #FFF;
+    text-decoration: none;
+}
+
+.header__nav-item>a:hover {
+    color: #FFF;
+}
+
+.header__nav-item>a::before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #FFF;
+    transform: scaleX(0);
+    transform-origin: top left;
+    transition: transform 0.3s ease;
+}
+
+.header__nav-item>a:hover::before {
+    transform: scaleX(1);
 }
 
 .header__contact-us {
     height: 60px;
-    width: 158px;
+    width: 180px;
 }
 
 .header__slogan-container {
@@ -85,6 +110,11 @@ header * {
 
 .header__truck {
     margin-left: -1120px;
+    transition: margin-left 1s ease-out;
+}
+
+.header__truck:hover {
+    margin-left: -1320px;
 }
 
 /********** Medium devices only **********/
@@ -105,6 +135,10 @@ header * {
     .header__nav ul {
         width: 400px;
     }
+    .header__contact-us {
+        height: 60px;
+        width: 150px;
+    }
     .header__slogan-container {
         margin-right: 30px;
         margin-bottom: 55px;
@@ -116,6 +150,9 @@ header * {
     .header__truck {
         margin-left: -860px;
         height: 320px;
+    }
+    .header__truck:hover {
+        margin-left: -860px;
     }
 }
 
@@ -164,7 +201,7 @@ header * {
         height: 60px;
         padding-top: 10px;
         align-items: center;
-        background: #EE4D47;
+        background: var(--main-color);
         flex-wrap: wrap;
     }
     .header__logo {
