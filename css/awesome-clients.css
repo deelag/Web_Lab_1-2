@@ -1,7 +1,8 @@
 .awesome-clients-container {
-    margin-bottom: 200px;
+    margin-bottom: 100px;
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
 
 .awesome-clients-titles {
@@ -20,8 +21,11 @@
 
 .awesome-clients-texts {
     margin-top: 40px;
-    display: flex;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    min-height: 480px;
+    align-items: center;
+    justify-items: center;
 }
 
 .awesome-clients-text {
@@ -30,11 +34,16 @@
     flex-direction: column;
     justify-content: space-between;
     padding: 40px;
-    width: 300px;
-    min-height: 300px;
+    max-width: 300px;
+    min-height: 340px;
     background: #FFF;
     box-shadow: 0px 20px 40px rgba(238, 77, 71, 0.1);
     border-radius: 10px;
+    transition: align-self 10s linear;
+}
+
+.awesome-clients-text:hover{
+    align-self: start;
 }
 
 .client-account {
@@ -67,15 +76,14 @@
         margin-bottom: 60px;
     }
     .awesome-clients-texts {
-        flex-direction: column;
-        align-items: center;
+        grid-template-columns: 100%;
         margin-top: 10px;
     }
     .awesome-clients-text {
         width: 280px;
-        min-height: 320px;
+        min-height: 300px;
         box-sizing: border-box;
-        padding: 10px;
+        padding: 20px;
     }
     .awesome-clients-title {
         font-size: 32px;
